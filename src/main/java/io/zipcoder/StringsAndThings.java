@@ -18,8 +18,9 @@ public class StringsAndThings {
         int yzCount = 0;
         input = input.toLowerCase() + " ";
 
-        for(int q = 0;q < input.length() - 1; q++){
-            if ((input.charAt(q) == 'y' || input.charAt(q) == 'z') && !Character.isLetter(input.charAt(q + 1)))
+
+        for(int counter = 0;counter  < input.length()- 1; counter ++){
+            if ((input.charAt(counter ) == 'y' || input.charAt(counter ) == 'z') && !Character.isLetter(input.charAt(counter  + 1)))
                 yzCount++;
         }
         {
@@ -41,7 +42,12 @@ public class StringsAndThings {
      *           removeString("Hello there", "e") //  Should return "Hllo thr"
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
+
+
     public String removeString(String base, String remove){
+
+
+
         return null;
     }
 
