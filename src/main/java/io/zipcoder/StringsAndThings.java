@@ -1,6 +1,9 @@
 package io.zipcoder;
 
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * @author tariq
  */
@@ -42,13 +45,17 @@ public class StringsAndThings {
      *           removeString("Hello there", "e") //  Should return "Hllo thr"
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
-
+    //make
 
     public String removeString(String base, String remove){
+        String answer = "";
+        Pattern comChar = Pattern.compile(remove);
+        String sameChar = comChar.matcher(base).replaceAll("");
 
 
 
-        return null;
+
+        return sameChar;
     }
 
     /**
