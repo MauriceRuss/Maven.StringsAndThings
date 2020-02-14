@@ -61,9 +61,23 @@ public class StringsAndThings {
     // match if is pattern and not happens
     //return a boolean response if pattern occurs
     public Boolean containsEqualNumberOfIsAndNot(String input) {
+        input = input.toLowerCase();
+        input = input.replaceAll("x", "");
+        input = input.replaceAll("y", "");
+        input = input.replaceAll("is", "x");
+        input = input.replaceAll("not", "y");
+        int x = 0;
+        int y = 0;
+        for(int q = 0; q < input.length(); q++){
+            if(input.charAt(q) == 'x'){
+                x++;
+            } else if (input.charAt(q) == 'y'){
+                y++;
+            }
+        }
 
 
-        return null;
+        return x == y;
     }
 
     /**
