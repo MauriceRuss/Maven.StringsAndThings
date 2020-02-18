@@ -1,6 +1,7 @@
 package io.zipcoder;
 
 
+import java.sql.SQLOutput;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,7 +19,7 @@ public class StringsAndThings {
      * countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input) {
-        int yzCount = 0;
+        /*int yzCount = 0;
         input = input.toLowerCase() + " ";
 
 
@@ -28,9 +29,18 @@ public class StringsAndThings {
                     yzCount++;
                 }
             }
+        System.out.println(yzCount);*/
+        int count = 0;
+        char charZ = 'z';
+        char charY = 'y';
+        for(int q = 0; q < input.length(); q++ ){
+            if((input.charAt(q)== charY)  ||  input.charAt(q) == charZ){
+                count++;
 
+            }
+        }
 
-            return yzCount;
+            return count;
         }
 
 
