@@ -30,15 +30,19 @@ public class StringsAndThings {
                 }
             }
         System.out.println(yzCount);*/
+
+
+        //Still have to isolate the first and last
         int count = 0;
         char charZ = 'z';
         char charY = 'y';
         for(int q = 0; q < input.length(); q++ ){
-            if((input.charAt(q)== charY)  ||  input.charAt(q) == charZ){
+            if((input.charAt(q) == charY)  ||  input.charAt(q) == charZ){
                 count++;
 
             }
         }
+        System.out.println(count);
 
             return count;
         }
