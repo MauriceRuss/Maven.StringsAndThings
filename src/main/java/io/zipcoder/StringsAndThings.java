@@ -19,31 +19,15 @@ public class StringsAndThings {
      * countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input) {
-        /*int yzCount = 0;
-        input = input.toLowerCase() + " ";
-
-
-        for (int counter = 0; counter < input.length() - 1; counter++) {
-
-                if (input.charAt(input.length() - 1) == 'z' || input.charAt(input.length() - 1) == 'y') {
-                    yzCount++;
-                }
-            }
-        System.out.println(yzCount);*/
-
-
-        //Still have to isolate the first and last
         int count = 0;
-        char charZ = 'z';
-        char charY = 'y';
-        for(int q = 0; q < input.length(); q++ ){
-            if((input.charAt(q) == charY)  ||  input.charAt(q) == charZ){
+        String[] words = input.split(" ");
+
+        for(int i = 0; i < words.length; i++ ){
+            if((words[i].charAt(words[i].length() -1) == 'y')  ||  (words[i].charAt(words[i].length() -1) == 'z')){
                 count++;
 
             }
         }
-        System.out.println(count);
-
             return count;
         }
 
@@ -103,14 +87,14 @@ public class StringsAndThings {
      */
     public Boolean gIsHappy(String input) {
         char[] arr = input.toCharArray();
-        for(int q = 1; q < arr.length -2; q++){
-            if(arr[q] == 'g'){
-                if(!(arr[q-1] == 'g' || arr[q + 1] == 'g')){
-                    return false;
+        for(int i = 1; i < arr.length-2; i++){
+            if(arr[i] == 'g'){
+                if((arr[i-1] == 'g' || arr[i + 1] == 'g')){
+                    return true;
                 }
             }
         }
-        return true;
+        return false;
     }
 
 
